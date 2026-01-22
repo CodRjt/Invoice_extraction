@@ -7,7 +7,6 @@ venv/
 .env
 
 # --- Model Weights (Huge files) ---
-*.pt
 *.pth
 *.onnx
 *.tflite

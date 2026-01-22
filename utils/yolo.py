@@ -23,5 +23,5 @@ def get_boxes(image_path):
                         "confidence": conf,
                         "bbox": [round(x1,2), round(y1,2), round(x2,2), round(y2,2)]
                     }
-            return best_boxes
+        return best_boxes
 

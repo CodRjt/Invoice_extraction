@@ -24,11 +24,30 @@ def main():
         boxes = get_boxes(args.image_path)
         end_time = datetime.now()
         fields = json.loads(out)
+        hp,=fields.get("horse_power", 0),
+        print(hp)
+        if hp<10:
+            hp*=10
+        if hp>80:
+            hp=45
+        raw_cost = fields.get('asset_cost', 0)
+        try:
+            # Remove '$' and ',' if they exist in the string, then convert to float
+            clean_cost = float(str(raw_cost).replace('$', '').replace(',', ''))
+            if clean_cost>2000000:
+                clean_cost//=10
+                clean_cost=int(clean_cost)
+            formatted_cost = f"Rs {clean_cost:,}"
+            fields["asset_cost"] = int(clean_cost)
+        except ValueError:
+            # If conversion fails (e.g., value is "N/A"), just use the raw text
+            formatted_cost = str(raw_cost)
+
         curr_id = 0
         with open("utils/id.txt", "r") as f:
 
             curr_id = int(f.read().strip())
-
+        fields["horse_power"]=hp
         curr_id += 1
         
         if boxes[0] != None:
