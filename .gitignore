@@ -1,0 +1,24 @@
+*.png
+# --- Python & System ---
+__pycache__/
+*.py[cod]
+.DS_Store
+venv/
+.env
+
+# --- Model Weights (Huge files) ---
+*.pt
+*.pth
+*.onnx
+*.tflite
+
+# --- YOLO/Training Outputs ---
+runs/
+wandb/
+
+# --- Datasets (Don't upload images to GitHub usually) ---
+dataset/
+dataset_info/
+labels/
+labels_info/
+
