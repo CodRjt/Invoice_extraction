@@ -1,11 +1,23 @@
 ---
 
 # Automated Extraction and Validation of Tractor Invoice Data
+###How to interact:
+1) create a virtual env:
+python -m venv venv
+2)activate the virtual env
+### Install dependencies 
+Use:
+pip -r requirements.txt
 
+### Using the script
+python executable.py <path/to/file>
 ## FrontEnd
 <p align="center">
   <img src="utils/image_readme/frontend.png" alt="Gradio UI" width="800"/>
 </p>
+
+To run frontend run the following command:
+python gradio_frontend.py
 ## Overview
 
 This project is an **end-to-end document AI pipeline** designed to automatically extract and validate key information from **tractor invoice images** and output a structured JSON.
