@@ -1,4 +1,3 @@
-*.png
 # --- Python & System ---
 __pycache__/
 *.py[cod]
