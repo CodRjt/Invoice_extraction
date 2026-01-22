@@ -1,10 +1,14 @@
----
+
 
 # Automated Extraction and Validation of Tractor Invoice Data
-###How to interact:
+### How to interact:
+### The given instructions are as per Ubuntu 22:
 1) create a virtual env:
 python -m venv venv
-2)activate the virtual env
+
+
+2 activate the virtual env
+source venv/bin/activate
 ### Install dependencies 
 Use:
 pip -r requirements.txt
