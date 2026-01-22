@@ -78,7 +78,7 @@ def process_invoice(image_path):
 
 # --- Gradio UI Layout ---
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🚜 Invoice Extraction & Verification")
+    gr.Markdown("# Invoice Extraction & Verification")
     gr.Markdown("Upload an invoice image to extract key asset details and verify the presence of stamps and signatures.")
     
     with gr.Row():
